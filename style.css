@@ -367,26 +367,28 @@ body {
 }
 
 .stat-icon {
-  width: 140px;
-  height: 140px;
+  width: 100px; /* Adjusted for minimalist icons */
+  height: 100px;
   margin-bottom: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  filter: drop-shadow(0 15px 15px rgba(0,0,0,0.4));
   transition: transform 0.3s ease;
 }
 
 .stat-card:hover .stat-icon {
-  transform: scale(1.1) translateY(-10px);
+  transform: scale(1.15) translateY(-5px);
 }
 
-.stat-icon img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  /* Use mix-blend-mode to make the pure black backgrounds of the generated icons transparent against the dashboard */
-  mix-blend-mode: screen;
+.stat-icon i {
+  font-size: 3.8rem;
+  color: var(--cyan-accent);
+  filter: drop-shadow(0 0 12px var(--cyan-glow));
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover .stat-icon i {
+  filter: drop-shadow(0 0 20px var(--cyan-accent));
 }
 
 .stat-number {
