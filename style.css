@@ -2004,7 +2004,7 @@ body {
 }
 
 .header-logo-img {
-  height: 45px;
+  height: 70px;
   width: auto;
   object-fit: contain;
 }
@@ -2209,7 +2209,7 @@ body {
   }
   
   .header-logo-img {
-    height: 38px !important; /* Ensure the logo isn't too large */
+    height: 55px !important; /* Larger logo for better brand visibility */
     width: auto;
     object-fit: contain;
   }
