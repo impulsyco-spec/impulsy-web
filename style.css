@@ -484,7 +484,7 @@ body {
 /* ========================================= */
 .section-automations-content {
   padding: 4rem 10%;
-  background-color: #050505;
+  background-color: #000; /* Pure black for total immersion */
   position: relative;
   z-index: 5;
 }
@@ -688,8 +688,16 @@ body {
   pointer-events: none;
 }
 
-.floating-icon-card:hover .floating-icon-img {
-  filter: drop-shadow(0 0 30px rgba(0, 229, 255, 0.6));
+.icon-image-box i {
+  font-size: 5rem;
+  color: var(--cyan-accent);
+  filter: drop-shadow(0 0 15px var(--cyan-glow));
+  transition: all 0.4s ease;
+}
+
+.floating-icon-card:hover .icon-image-box i {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 0 30px var(--cyan-accent));
 }
 
 .floating-icon-label {
