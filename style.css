@@ -1,22 +1,20 @@
-/* FONT DEFINITIONS FOR NEXA & MOONTIME */
-/* Moontime is on Google Fonts (similar alternatives usually used if not: Great Vibes or Caveat, but we'll try to find a close match or assume custom local font loaded by user. We will use a standard import for a free handwriting font that acts as Moontime if moontime isn't directly available via standard CDNs, or use local @font-face if provided. Let's assume we map the aesthetic). 
-For Nexa we'll use a system sans-serif fallback if they don't have the font locally, but we'll declare it primarily. */
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap');
-
 @font-face {
     font-family: 'NexaBold';
-    src: url('/fonts/Nexa-Bold.woff') format('woff');
+    src: url('/fonts/Nexa-Bold.woff2') format('woff2'),
+         url('/fonts/Nexa-Bold.woff') format('woff'),
+         url('/fonts/Nexa-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Mistrully';
-    src: url('/fonts/Mistrully.woff') format('woff');
+    src: url('/fonts/Mistrully.woff') format('woff'),
+         url('/fonts/Mistrully.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 :root {
@@ -26,8 +24,14 @@ For Nexa we'll use a system sans-serif fallback if they don't have the font loca
     --text-main: #FFFFFF;
     --cyan-accent: #12FDDA;
     --cyan-glow: rgba(18, 253, 218, 0.4);
-    --font-main: 'Montserrat', 'NexaBold', sans-serif;
-    --font-accent: 'Mistrully', 'Ms Madi', cursive;
+    
+    /* NEW TYPOGRAPHY SYSTEM */
+    --font-main: 'NexaBold', sans-serif;
+    --font-accent: 'Mistrully', cursive;
+    
+    /* Fallback mappings for older definitions */
+    --font-primary: var(--font-main);
+    --font-secondary: var(--font-main);
 }
 
 * {
@@ -39,7 +43,7 @@ For Nexa we'll use a system sans-serif fallback if they don't have the font loca
 body {
   background-color: var(--bg-dark);
   color: var(--text-main);
-  font-family: var(--font-primary);
+  font-family: var(--font-main);
   overflow-x: hidden;
   min-height: 100vh;
 }
@@ -1754,7 +1758,7 @@ body {
 }
 
 .testimonial-text {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-main);
   font-size: 1.1rem;
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.85);
