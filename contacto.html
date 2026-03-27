@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto | Impulsy</title>
+  <!-- Preload Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <div id="app">
+    <!-- HEADER -->
+    <header class="navbar">
+      <div class="logo">
+        <span class="logo-text">Impulsy<span class="arrow">↗</span></span>
+      </div>
+      <div class="tagline">Impulsamos Marcas</div>
+    </header>
+
+    <!-- SIDE MENU (CYAN PILL) -->
+    <nav class="side-menu">
+      <ul class="menu-list">
+        <li><a href="/index.html#inicio">Inicio</a></li>
+        <li><a href="/automatizaciones.html">Automatizaciones</a></li>
+        <li><a href="/soluciones.html">Soluciones</a></li>
+        <li><a href="/testimonios.html">Testimonios</a></li>
+        <li><a href="/contacto.html" class="active">Contactanos</a></li>
+      </ul>
+    </nav>
+
+    <!-- MAIN CONTENT - CONTACTO -->
+    <main class="contacto-main">
+      <!-- HERO SECTION -->
+      <section class="section-contacto-hero">
+        <div class="contacto-hero-content">
+          <h1 class="main-title">TU PRÓXIMO PASO</h1>
+          <h2 class="accent-title">Empieza con un mensaje</h2>
+        </div>
+      </section>
+
+      <!-- CONTACT FORM SECTION -->
+      <section class="section-contacto-form">
+        <div class="contacto-container">
+          <!-- Form centered -->
+          <!-- Right: Form (Lead Connector Embed) -->
+          <div class="contacto-form-wrapper lead-connector-container">
+            <h3 class="form-heading">Cuéntanos sobre tu proyecto</h3>
+            
+            <div class="iframe-embed-wrapper">
+              <iframe
+                src="https://api.leadconnectorhq.com/widget/form/m3WKwOT1ngnsGIeUcKmh"
+                style="width:100%;height:100%;border:none;border-radius:12px"
+                id="inline-m3WKwOT1ngnsGIeUcKmh" 
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="Data Funnel"
+                data-height="516"
+                data-layout-iframe-id="inline-m3WKwOT1ngnsGIeUcKmh"
+                data-form-id="m3WKwOT1ngnsGIeUcKmh"
+                title="Data Funnel"
+              >
+              </iframe>
+              <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+            </div>
+
+            <div class="direct-channels">
+              <p class="channels-title">O si prefieres algo más rápido:</p>
+              <div class="channels-grid">
+                <a href="https://wa.me/573028408594" target="_blank" class="channel-card wa">
+                  <i class="ph ph-whatsapp-logo"></i>
+                  <span>WhatsApp</span>
+                </a>
+                <a href="mailto:marketing@impulsy.co" class="channel-card email">
+                  <i class="ph ph-envelope"></i>
+                  <span>Email</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER (SIMPLE) -->
+    <footer class="footer-simple">
+      <p>&copy; 2026 Impulsy. Impulsando el futuro hoy.</p>
+    </footer>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
