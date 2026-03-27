@@ -2195,78 +2195,86 @@ body {
   .logo-text { font-size: 2rem; }
   .tagline { margin-right: 0; font-size: 1rem; }
 
-  /* Side Menu as Mobile Nav (Forced Vertical) */
+  /* Side Menu as Mobile Nav (Horizontal Bar) */
   .side-menu {
-    position: fixed !important;
-    top: 1.5rem !important;
-    left: 5% !important;
-    width: 90% !important;
+    position: sticky !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
     max-width: none !important;
-    padding: 1.2rem !important;
-    border-radius: 25px !important;
-    background: rgba(18, 253, 218, 0.98) !important;
-    backdrop-filter: blur(15px) !important;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.5) !important;
+    padding: 10px 5px !important;
+    border-radius: 0 !important;
+    background: rgba(18, 253, 218, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.2) !important;
     z-index: 10000 !important;
     transform: none !important;
     animation: none !important;
     display: flex !important;
-    justify-content: center !important;
+    justify-content: flex-start !important;
     align-items: center !important;
+    overflow-x: auto !important; /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch;
   }
 
   .side-menu .menu-list {
     display: flex !important;
-    flex-direction: column !important;
-    gap: 1rem !important;
+    flex-direction: row !important;
+    gap: 1.5rem !important;
     align-items: center !important;
-    justify-content: center !important;
-    padding: 0 !important;
+    padding: 0 1rem !important;
     margin: 0 !important;
     list-style: none !important;
-    width: 100% !important;
+    width: auto !important;
+    white-space: nowrap !important;
   }
 
   .side-menu .menu-list li {
-    width: 100% !important;
-    display: block !important;
+    width: auto !important;
+    display: inline-block !important;
   }
 
   .side-menu .menu-list a {
-    font-size: 1.1rem !important;
+    font-size: 0.9rem !important;
     font-weight: 800 !important;
     color: #000 !important;
     text-decoration: none !important;
-    display: block !important;
-    padding: 0.4rem 0 !important;
-    width: 100% !important;
+    padding: 5px 0 !important;
     text-transform: uppercase !important;
   }
 
   /* Typography Scaling */
-  .main-title { font-size: 2.5rem; }
-  .accent-title { font-size: 2.8rem; margin-top: 10px; }
-  .brutal-title { font-size: 3rem !important; }
-  .brutal-accent { font-size: 1.8rem !important; }
+  .main-title { font-size: 2.2rem; }
+  .accent-title { font-size: 2.5rem; margin-top: 5px; }
+  .brutal-title { font-size: 2.8rem !important; }
+  .brutal-accent { font-size: 1.6rem !important; }
 
-  /* Contact Form Optimization */
+  /* Contact Form Optimization (Maximum Width) */
   .contacto-container {
-    width: 95%;
+    width: 100%;
     padding: 0;
   }
 
   .contacto-form-wrapper {
-    padding: 2.5rem 1.2rem 4rem 1.2rem; /* More bottom padding for reCAPTCHA */
-    border-radius: 30px;
+    padding: 2rem 0.5rem 4rem 0.5rem; /* Minimum side padding */
+    border-radius: 20px;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .lead-connector-container {
+      padding: 0 !important;
   }
 
   .form-heading {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
   }
 
   .iframe-embed-wrapper {
-    min-height: 580px; /* Ensure iframe has enough height for reCAPTCHA on mobile */
+    min-height: 520px;
+    width: 100% !important;
   }
 
   /* Section Spacing */
